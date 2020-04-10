@@ -25,10 +25,9 @@ dashboardPage(
     dashboardBody(tabItems(
         tabItem(tabName = "map",
                 fluidRow(box(width=8, status="warning", title= "Map of Counties", solidHeader = TRUE, plotOutput("mymap")),
-                         box(width=4, status="warning", title = "Table of Counties", solidHeader = TRUE, collapsible = TRUE, DT::dataTableOutput("mytable")))),
+                         box(width=4, status="warning", title = "Table of Counties", solidHeader = TRUE, collapsible = TRUE, tableOutput("mydata")))),
         tabItem(tabName = "plot",
-                fluidPage(box(width=10, status="warning", title= "Cases over Time", solidHeader = TRUE, plotOutput("mytimeseries")))),
-        tabItem(tabName = "2", h2("Plot tab content"))
+                fluidPage(box(width=10, status="warning", title= "Cases over Time", solidHeader = TRUE, plotOutput("mytimeplot"))))
     ))
 )
 
