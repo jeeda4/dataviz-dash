@@ -8,6 +8,7 @@ library(dplyr)
 library(forcats)
 library(tidyr)
 library(DT)
+library(scales)
 
 
 
