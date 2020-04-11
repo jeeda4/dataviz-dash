@@ -67,7 +67,7 @@ shinyServer(function(input, output, session) {
      
      output$mytimeplot<- renderPlot({
        corona2 <- corona() %>% group_by(date) %>% summarize(sumcases=sum(cases)) %>% select(date,sumcases) 
-         p <- ggplot(data = corona2, aes(x = date, y = sumcases)) + geom_line(aes(colour = "blue")) + geom_point(aes(colour = "black")) +
+         p <- ggplot(data = corona2, aes(x = date, y = sumcases)) + geom_line(aes(colour = "blue")) + geom_point(aes(colour = "blue")) +
            theme_classic() + theme(legend.position = "none") +  scale_x_date(labels = date_format("%b-%d"), breaks='6 days') +
            labs(title = "COVID-19 Cases in Florida")
        return(p)
